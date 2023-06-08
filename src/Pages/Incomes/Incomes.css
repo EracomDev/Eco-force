@@ -1,0 +1,57 @@
+.DashFilter_section {
+    background: var(--boxesColor);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    margin-bottom: 25px;
+    padding: 10px;
+}
+
+.dashFilter_incomes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.dashFilter_incomes h4 {
+    font-size: 20px;
+    text-transform: capitalize;
+    align-items: center;
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    text-transform: capitalize;
+    gap: 4px;
+}
+
+
+select#incomes_list {
+    padding: 8px 16px;
+    border: none;
+    background: var(--btnColor);
+    border-radius: 4px;
+    color: var(--textWhite);
+    font-size: 14px;
+    outline: none;
+}
+
+
+select#incomes_list option {
+    color: var(--textBlack);
+}
+
+
+.filterButtons button {
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-weight: 500;
+    color: var(--textWhite);
+    font-size: 14px;
+    border: 0;
+    background: var(--btnColor);
+    display: inline-block;
+    margin: 0px 10px 10px 0px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}

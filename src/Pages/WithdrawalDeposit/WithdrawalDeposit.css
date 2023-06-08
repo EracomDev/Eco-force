@@ -1,0 +1,60 @@
+.dashWithrawal_section {
+    padding: 20px 10px;
+    background: var(--boxesColor);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--dashboardBoxesShadow);
+    margin-bottom: 15px;
+}
+
+.dashWithrawal_section img {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    display: block;
+}
+
+.dashWithrawal_section h4 {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: Times New Roman, serif;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+
+select#wallets {
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    margin-bottom: 10px;
+    outline: none;
+}
+
+button.button_income {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--textWhite);
+    background: var(--btnColor);
+}
+
+.availableAount {
+    display: flex;
+    justify-content: space-between;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    margin: 0;
+
+}

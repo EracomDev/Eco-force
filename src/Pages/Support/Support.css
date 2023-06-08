@@ -1,0 +1,42 @@
+.supportSection {
+    background: var(--boxesColor);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    margin-bottom: 25px;
+    padding: 20px 10px;
+}
+
+.supportSection h4 {
+    font-family: Times New Roman, serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.supportSection p {
+    font-size: 14px;
+}
+
+textarea.form-control {
+    margin: 10px 0px;
+}
+
+.SupportButtons button,
+.SupportButtons a {
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-weight: 500;
+    color: var(--textWhite);
+    font-size: 14px;
+    border: 0;
+    background: var(--btnColor);
+    display: inline-block;
+    margin: 0px 10px 10px 0px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+.SupportButtons a {
+    color: var(--textWhite) !important;
+}

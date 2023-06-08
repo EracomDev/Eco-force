@@ -1,0 +1,258 @@
+    .header {
+        background-image: url("./../../assets/headerbg2.jpg");
+        width: 100%;
+        min-height: 100vh;
+        background-position: center center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.8);
+        background-blend-mode: overlay;
+    }
+
+    .headerContent h1 {
+        font-weight: bolder;
+        font-size: 55px;
+        color: #fff;
+    }
+
+    .headerContent p {
+        color: #fff;
+    }
+
+    .headerRow {
+        align-items: center;
+        min-height: 90vh;
+    }
+
+    /* .about img {
+        width: 100%;
+        padding: 50px;
+        display: block;
+        margin: auto;
+    } */
+
+    .about h1 {
+        font-size: 55px;
+        font-weight: bold;
+        color: #000
+    }
+
+    .about h4 {
+        font-size: 25px;
+        font-weight: 500;
+        color: #555;
+    }
+
+    .about p {
+        font-size: 16px;
+        color: #555;
+    }
+
+    .aboutCol #lottie {
+        transform: scale(1.2);
+    }
+
+    /* ---------------------- */
+    .features {
+        background: #F2F2F2;
+        padding: 60px 0;
+
+    }
+
+    .secHeading {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bolder;
+        color: #000
+    }
+
+    .secSubHeading {
+        text-align: center;
+        width: 60%;
+        margin: auto;
+        color: rgb(56, 55, 55);
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 40px;
+    }
+
+    .featureCard {
+        text-align: center;
+        background: white;
+        padding: 30px 10px;
+        border-radius: 15px;
+        height: 100%;
+    }
+
+    .featureCard img {
+        height: 120px;
+        margin-bottom: 20px;
+
+    }
+
+    .featureCard h1 {
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(219, 146, 9);
+    }
+
+    .featureCard p {
+        color: #555;
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .token {
+        padding-top: 70px;
+        margin-bottom: -40px;
+    }
+
+    .token>p {
+        width: 60%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .countDown h1 {
+        color: black !important;
+        text-align: center;
+    }
+
+    .countDown {
+        padding: 50px 0;
+    }
+
+    .priceChart {
+        padding: 50px 0
+    }
+
+    .cryptoPrice {
+        coloR: white;
+    }
+
+    .header marquee {
+        display: flex;
+        align-items: center;
+    }
+
+    .marqueeData {
+        display: flex;
+    }
+
+    .marqueeData .cryptoPrice {
+        margin-right: 70px;
+        display: flex;
+        align-items: center;
+    }
+
+    .cryptoPrice img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .cryptoPrice h1 {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0;
+        color: var(--colorPrimary)
+    }
+
+    .cryptoPrice p {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    .priceChart {
+        background: black;
+        color: white;
+    }
+
+    .white {
+        color: white !important
+    }
+
+    .teamMember {
+        margin-top: 50px;
+    }
+
+    .teamDiv {
+        text-align: center;
+        padding: 30px 10px;
+    }
+
+    .teamDiv h4 {
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .teamDiv h5 {
+        font-weight: 500;
+        font-size: 17px;
+
+    }
+
+    .teamDiv p {
+        font-weight: 400;
+        font-size: 15px;
+    }
+
+    .teamDiv img {
+        width: 170px !important;
+        height: 170px !important;
+        border-radius: 50%;
+        margin: auto;
+        margin-bottom: 10px;
+
+    }
+
+    .teamMember {
+        padding: 50px 0;
+    }
+
+    .roadmap {
+        background: black;
+        padding: 60px 0px 30px;
+        margin-top: 41px;
+    }
+
+    .footer {
+        background: #000;
+    }
+
+    .partners {
+        background-image: url("./../../assets/headerbg2.jpg");
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.7);
+        background-blend-mode: overlay;
+    }
+
+    .pImg {
+        width: 150px !important;
+        aspect-ratio: 3/2;
+        object-fit: contain;
+        mix-blend-mode: color-burn;
+        display: flex;
+        align-items: center;
+        filter: brightness(150%);
+    }
+
+    @media (max-width: 767px) {
+        .aboutCol #lottie {
+            transform: scale(1);
+        }
+
+        .secSubHeading {
+            width: 95% !important;
+        }
+
+        .headerRow h1 {
+            margin-top: 40px;
+            font-size: 40px;
+        }
+
+        .headerAnim {
+            padding-top: 30px;
+        }
+    }

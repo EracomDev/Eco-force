@@ -1,0 +1,158 @@
+/*
+Template Name: Eracom-dashboard 
+Author: For user dashboard
+File: css
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Lato:ital,wght@0,300;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&family=Nunito:ital,wght@0,300;0,500;0,600;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:ital,wght@0,600;0,700;1,400;1,500;1,700&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,900;1,700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    overflow-x: hidden;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+:root {
+    --dashboard-boxes-color: #863900;
+    --bodyColor: #f9f8f9;
+    --sidebarColor: #fff;
+    --textBlack: #000;
+    --textWhite: #fff;
+    --loginWhite: #fff;
+    --textLight: #7e7e7e;
+    --purple: #863900;
+    --textCompanyname: #0B2A97;
+    --btnColor: linear-gradient(45deg, #d45b00, #000000);
+    --boxBackground: linear-gradient(45deg, #d45b00, #000000);
+    --hoverSideColor: rgba(11, 42, 151, 0.1);
+    --hoverSideTextColor: #ffffff;
+    --boxShadowSidebar: 0px 0px 2px rgb(163 163 163 / 31%);
+    --headerColor: #fff;
+    --dashboardTitleColor: #DEC0A8;
+    --dashboardBoxesShadow: 0 0 8px rgb(0 0 0 / 7%);
+    --border: #e8ebed;
+    --boxesColor: #fff;
+    --textDark: #18269d;
+    --colorPrimary: linear-gradient(45deg, #6910c4, #411bb1);
+}
+
+.alertMsg {
+    background: white;
+    padding: 20px 120px;
+    border-radius: 50px;
+    color: var(--purple);
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    box-shadow: 0px 0px 3px 0px var(--purple);
+    transform: translateX(-50%);
+    transition: top 0.5s;
+    white-space: nowrap;
+    z-index: 9999;
+    top: -70px
+}
+
+th,
+td {
+    padding: 10px !important;
+    white-space: nowrap !important;
+}
+
+.heading {
+    color: var(--colorPrimary);
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Times New Roman', serif;
+    letter-spacing: 5px;
+    font-weight: bold;
+    color: var(--purple);
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+body {
+    font-family: nunito, sans-serif !important;
+    font-size: 14px;
+    color: #000;
+    background-color: var(--bodyColor) !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+ul {
+    list-style: none !important;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+
+.form-control:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.sideIcon_menu {
+    justify-content: end !important;
+}
+
+::-webkit-scrollbar {
+    width: 6px !important;
+    height: 3px !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(202, 199, 199);
+    border-radius: 30px;
+}
+
+.tableTrans {
+    overflow-x: auto;
+}
+
+@media screen and (max-width: 1024px) {
+    #menuToggle {
+        display: block !important;
+    }
+
+    .sideDashboard.active {
+        left: 0;
+        display: block;
+    }
+
+    .contentSection {
+        margin-left: 0px !important;
+    }
+
+    .navHeader {
+        left: 0px !important;
+    }
+
+    .sideDashboard {
+        left: -250px;
+        transition: left .5s ease;
+        top: 52px !important;
+    }
+
+    .sideIcon_menu {
+        justify-content: space-between !important;
+    }
+
+    .heading {
+        font-size: 20px;
+    }
+
+}

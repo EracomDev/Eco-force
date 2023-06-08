@@ -1,0 +1,182 @@
+.sideDashboard {
+    width: 250px;
+    padding-bottom: 0;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    padding: 20px;
+    z-index: 4;
+    background-color: var(--sidebarColor);
+    box-shadow: var(--boxShadowSidebar);
+    /* transition: all .5s ease; */
+    overflow-y: scroll;
+    bottom: 0;
+}
+
+i#menuToggle {
+    display: none;
+    font-size: 24px;
+    background: var(--btnColor);
+    padding: 0px 8px;
+    border-radius: 4px;
+    color: var(--textWhite);
+}
+
+.sidebarLogo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.sidebarLogo h5 {
+    font-size: 18px;
+    text-transform: capitalize;
+    color: var(--textCompanyname);
+}
+
+
+ul.menuList li {
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: all 0.5s;
+}
+
+ul.menuList li h5 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    margin: 0px;
+    color: var(--textLight);
+    text-transform: capitalize;
+}
+
+ul.menuList li h5 i {
+    font-size: 16px;
+    color: var(--textLight);
+    display: flex;
+    align-items: center;
+}
+
+.planDetail {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background: var(--boxBackground);
+    margin-top: 70px;
+    border-radius: 16px;
+    gap: 10px;
+}
+
+.planDetail h6 {
+    margin: 0px;
+    text-transform: capitalize;
+    color: var(--textWhite);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.menuList li:hover,
+.active li {
+    background: var(--dashboard-boxes-color);
+    border-radius: 8px;
+}
+
+.menuList li:hover h5,
+.active h5 {
+    color: var(--hoverSideTextColor) !important;
+}
+
+
+.menuList li:hover h5 i,
+.active i {
+    color: var(--hoverSideTextColor) !important;
+}
+
+/************* header-css *************/
+
+.navHeader {
+    left: 250px;
+    top: 0px;
+    position: fixed;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1002;
+    background-color: var(--tb-header-bg);
+    transition: all .1s ease-out;
+    padding: 10px;
+    background: var(--headerColor);
+}
+
+.sideIcon_menu {
+    display: flex;
+    align-items: center;
+}
+
+.headerProfile {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.headerProfile img {
+    border-radius: 50%;
+}
+
+.userDetail span {
+    font-size: 12px;
+    display: block;
+}
+
+.userDetail b {
+    font-size: 12px;
+}
+
+.userDetail {
+    line-height: 14px;
+}
+
+.IncomeDropdown {
+    margin-left: 20px;
+}
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown li {
+    cursor: pointer;
+}
+
+#userImg {
+    width: 30px;
+}
+
+.userDetail span {
+    font-weight: 700;
+}
+
+.dashboardLogo {
+    width: 110px;
+    display: block;
+    margin: auto;
+}
+
+@media (max-width: 1024px) {
+    .active li {
+        background: transparent !important;
+        border-radius: 8px;
+    }
+
+    .active h5 {
+        color: var(--textLight) !important;
+    }
+
+    .active i {
+        color: var(--textLight) !important;
+    }
+}

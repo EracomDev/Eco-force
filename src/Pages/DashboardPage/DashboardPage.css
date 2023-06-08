@@ -1,0 +1,361 @@
+.headerProfile {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.headerProfile img {
+    border-radius: 50%;
+}
+
+.userDetail span {
+    font-size: 12px;
+    display: block;
+    /* line-height: 10px; */
+}
+
+.userDetail b {
+    font-size: 12px;
+}
+
+.userDetail {
+    line-height: 14px;
+}
+
+.contentSection {
+    margin-left: 250px;
+    padding: 65px 0px 30px 0px;
+}
+
+
+.dashboardTitle_Data {
+    background: var(--dashboardTitleColor);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.dashbaordTitle_image img {
+    width: 100%;
+}
+
+.dashboardTitle_inner h1 {
+    font-size: 28px;
+    font-weight: 600;
+    font-family: Times New Roman, serif;
+    text-transform: capitalize;
+    margin-bottom: 0px;
+}
+
+.dashboardTitle_inner p {
+    font-size: 13px;
+    text-transform: capitalize;
+}
+
+.dashboardTitle_btn a {
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-weight: 500;
+    color: var(--textWhite);
+    font-size: 14px;
+    border: 0;
+    background: var(--btnColor);
+    display: inline-block;
+    margin: 0px 10px 10px 0px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+.dashboardRight_box .myPackage {
+    padding: 10px;
+    background: var(--boxesColor);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--dashboardBoxesShadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.myPackage_inner h4 {
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-family: Times New Roman, serif;
+}
+
+.myPackage_inner h6 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0px;
+}
+
+
+.myPackage img {
+    width: 64px;
+}
+
+
+
+.referaLink_section {
+    padding: 10px;
+    background: var(--boxesColor);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--dashboardBoxesShadow);
+
+    margin-bottom: 15px;
+}
+
+.referaLink_section img {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    display: block;
+}
+
+h4.dashboardRight_heading {
+    margin-bottom: 15px;
+    font-family: Times New Roman, serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.referrallink_Copy {
+    margin-top: 10px;
+    position: relative;
+}
+
+input.form-control.reffer {
+    height: 45px;
+    position: relative;
+    border: 1px solid var(--border);
+    padding-right: 50px;
+}
+
+.referrallink_Copy i {
+    cursor: pointer;
+    position: absolute;
+    right: 6px;
+    top: 5px;
+    background: var(--btnColor);
+    border-radius: 4px;
+    color: var(--textWhite);
+    font-size: 18px;
+    padding: 4px 8px;
+}
+
+.dashboardTeam_section {
+    padding: 10px;
+    background: var(--boxesColor);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--dashboardBoxesShadow);
+    margin-bottom: 15px;
+}
+
+
+.totalDirects {
+    text-align: center;
+    padding: 10px 0px;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+
+.allDirects {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.directList {
+    padding: 10px;
+    width: 47%;
+    background: #e2e1f0;
+    margin: 4px;
+    border-radius: 10px;
+}
+
+
+.directList h6 {
+    text-transform: capitalize;
+    font-size: 14px;
+    margin: 0px;
+}
+
+.directList span {
+    font-weight: 700;
+}
+
+
+.dashboardTeam_section img {
+    width: 100%;
+    max-width: 190px;
+    margin: auto;
+    display: block;
+}
+
+
+.dashboardIncome_box {
+    background: var(--dashboard-boxes-color);
+    border: 1px solid #e8ebed;
+    border-radius: 14px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .1);
+    margin-bottom: 15px;
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inomesContent h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.inomesContent p {
+    margin-bottom: 5px;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: var(--textWhite);
+}
+
+.incomesTitle {
+    margin: 15px 0px;
+    font-family: Times New Roman, serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.inomesIcons {
+    width: 40px;
+    height: 40px;
+    background: #9F4C0E;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 6px;
+    color: white;
+}
+
+.inomesIcons i {
+    font-size: 22px;
+}
+
+
+.lastestTransaction_table {
+    background: var(--boxesColor);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    margin-bottom: 25px;
+    padding: 20px 10px;
+}
+
+.incomesTitle.lastest {
+    margin: 0px;
+    text-align: center;
+}
+
+.tableTrans table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tableTrans table th {
+    border-bottom: 1px solid #e7e7e759;
+    font-size: 14px;
+    padding: 8px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+td {
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .dashbaordTitle_image img {
+        display: none;
+    }
+
+    .referaLink_section img {
+        max-width: 300px;
+        margin: auto;
+        display: block;
+    }
+
+    .inomesContent h4 {
+        font-size: 12px;
+    }
+
+    .inomesContent p {
+        font-size: 12px;
+    }
+
+    .dashboardTitle_inner p {
+        font-size: 12px;
+    }
+
+    .marqContent p,
+    .marqHeading p {
+        font-size: 10px;
+    }
+}
+
+
+.marqHeading {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+.marqContent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.marqContent p,
+.marqHeading p,
+.marqContent div {
+    width: 34%;
+    text-align: center !important;
+    background: var(--dashboard-boxes-color);
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    padding: 10px;
+    margin: 0;
+    margin-bottom: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.marqContent div {
+    text-align: center !important;
+    display: block;
+
+}
+
+.marqContent div img {
+    width: 50px;
+}
+
+.countDownTime p {
+    margin: 0px !important;
+}
+
+.signupBanus {
+    background: linear-gradient(45deg, #863900, #000000) !important;
+    color: white;
+    padding: 20px !important;
+}

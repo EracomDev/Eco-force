@@ -1,0 +1,19 @@
+.teamButtons a {
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-weight: 500;
+    color: var(--textWhite);
+    font-size: 14px;
+    border: 0;
+    background: var(--btnColor);
+    display: inline-block;
+    margin: 0px 10px 10px 0px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    .filterButtons {
+        margin-top: 15px;
+    }
+}
