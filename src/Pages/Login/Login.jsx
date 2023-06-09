@@ -7,6 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import ConnectButton from '../../Component/ConnectButton';
 import './Login.css'
 import Register from './Register';
+import { ethers } from 'ethers';
 import axios from 'axios';
 import { ApiPaths } from '../../API';
 const Login = () => {
@@ -14,6 +15,48 @@ const Login = () => {
     const [loading1, setLoading1] = useState(false);
     const [msg1, setMsg1] = useState('');
     const navigate = useNavigate();
+
+
+    async function loadEthers() {
+        setLoading1(true);
+        try {
+            if (window.ethereum) {
+                window.provider = new ethers.providers.Web3Provider(window.ethereum);
+                await window.ethereum.enable(); // Request user permission to access their accounts
+                setLoading1(false);
+            } else {
+                console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
+                setLoading1(false);
+            }
+        } catch (e) {
+            console.log("Please check your network");
+            setLoading1(false);
+        }
+    }
+
+    async function getChain() {
+        try {
+            setLoading1(true)
+            const network = await window.provider.getNetwork();
+            const chainId = network.chainId;
+            console.log('Chain ID:', chainId);
+            setLoading1(false);
+            return chainId;
+        } catch (e) {
+            console.log("Please check your network");
+            setLoading1(false);
+        }
+    }
+    async function CheckBeforeLogin() {
+        await loadEthers();
+        let chain = await getChain();
+        if (chain == 56) {
+            LoginFun();
+        } else {
+            alert("Please Connect your wallet with BNB Smart Chain Mainnet");
+        }
+    }
+
     async function LoginFun() {
         try {
             setLoading1(true)
@@ -27,7 +70,7 @@ const Login = () => {
                 headers: { "Content-Type": "multipart/form-data" },
             })
                 .then(function (response) {
-                    console.log(response);
+                    // console.log(response);
                     if (response?.data?.tokenStatus == false) {
                         navigate('/login');
                         setMsg1(response?.data?.message);
@@ -72,7 +115,7 @@ const Login = () => {
                                 {/* <input type="text" id="viewInput" placeholder="Enter User ID." /> */}
 
                                 <p style={{ color: 'black' }}>To access all the functions of your personal account use Auto Login</p>
-                                <Link className="loginBtn" onClick={LoginFun} >Automatic Login</Link>
+                                <Link className="loginBtn" onClick={CheckBeforeLogin} >Automatic Login</Link>
                             </Col>
                         </Row>
                     </Container>

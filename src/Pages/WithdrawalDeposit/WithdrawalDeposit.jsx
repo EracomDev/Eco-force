@@ -31,7 +31,7 @@ const WithdrawalDeposit = () => {
       },
     })
       .then(function (response) {
-        console.log(response);
+        // console.log(response);
         setAvailBalance(response?.data?.wallets?.main_wallet);
         setLoading(false);
       })
@@ -59,7 +59,7 @@ const WithdrawalDeposit = () => {
           },
         })
           .then(function (response) {
-            console.log('withdrawAmount', response);
+            // console.log('withdrawAmount', response);
             if (response?.data?.status) {
               alert('Transaction Success');
               FetchData();
@@ -97,7 +97,7 @@ const WithdrawalDeposit = () => {
                     <p>$ {parseFloat(availBalance).toFixed(2)}</p>
                   </div>
                   <p className="error">{error.replace(/<[^>]+>/g, '')}</p>
-                  <input type="number" placeholder="Enter Amount" value={withdrawAmount} className="form-control mb-2" onChange={(e) => setWithdrawAmount(e.target.value)} />
+                  <input min={1} type="number" placeholder="Enter Amount" value={withdrawAmount} className="form-control mb-2" onChange={(e) => setWithdrawAmount(e.target.value)} />
                   <button class="button_income" onClick={WithdrawFun}>Withdraw</button>
                 </div>
               </div>

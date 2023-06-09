@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { ApiPaths } from '../../API';
 import axios from 'axios';
-
+import { ethers } from "ethers";
 import Loader from '../../Component/Loader/Loader'
 import { useNavigate } from 'react-router-dom';
 const Register = () => {
@@ -10,19 +10,57 @@ const Register = () => {
     const [msg, setMsg] = useState('');
     const { ethereum } = window
     const navigate = useNavigate();
+    const [chainIdd, setChainIdd] = useState();
 
-    function CheckBeforeRegister() {
-        if (!sponsor) {
-            setMsg('Invalid Sponsor');
-        } else {
-            Register();
-        }
-    }
     useEffect(() => {
         const after = window.location.search.slice(window.location.search.indexOf('=') + 1);
         setSponsor(after);
     }, [])
 
+    async function loadEthers() {
+        setLoading(true);
+        try {
+            if (window.ethereum) {
+                window.provider = new ethers.providers.Web3Provider(window.ethereum);
+                await window.ethereum.enable(); // Request user permission to access their accounts
+                setLoading(false);
+            } else {
+                console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
+                setLoading(false);
+            }
+        } catch (e) {
+            console.log("Please check your network");
+            setLoading(false);
+        }
+    }
+
+    async function getChain() {
+        try {
+            setLoading(true)
+            const network = await window.provider.getNetwork();
+            const chainId = network.chainId;
+            setChainIdd(chainId);
+            console.log('Chain ID:', chainId);
+            setLoading(false);
+            return chainId;
+        } catch (e) {
+            console.log("Please check your network");
+            setLoading(false);
+        }
+    }
+    async function CheckBeforeRegister() {
+        if (!sponsor) {
+            setMsg('Invalid Sponsor');
+        } else {
+            await loadEthers();
+            let chain = await getChain();
+            if (chain == 56) {
+                Register();
+            } else {
+                alert("Please Connect your wallet with BNB Smart Chain Mainnet");
+            }
+        }
+    }
     async function Register() {
         try {
             setLoading(true)
@@ -37,7 +75,7 @@ const Register = () => {
                 headers: { "Content-Type": "multipart/form-data" },
             })
                 .then(function (response) {
-                    console.log(response);
+                    // console.log(response);
                     if (response?.data?.tokenStatus == false) {
                         navigate('/login');
                         setMsg(response?.data?.message)

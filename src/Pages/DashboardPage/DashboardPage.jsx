@@ -17,6 +17,8 @@ import axios from "axios";
 import Loader from "../../Component/Loader/Loader";
 import CopyToClipboard from './../../Common/CopyToClipboard'
 import CountDown from "../../Component/CountDown";
+import CopyPara from "../../Common/CopyPara";
+
 const DashboardPage = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -26,10 +28,12 @@ const DashboardPage = () => {
   const [incomes, setIncomes] = useState([]);
   const [timer, setTimer] = useState(0);
   const [community, setCommunity] = useState(0);
+
   let x = 1;
   useEffect(() => {
     FetchData();
   }, [])
+
   useEffect(() => {
     setInterval(function () {
       axios({
@@ -41,7 +45,7 @@ const DashboardPage = () => {
         },
       })
         .then(function (response) {
-          console.log(response)
+          // console.log(response)
           setCommunity(response?.data?.community)
         })
         .catch(function (response) {
@@ -60,7 +64,7 @@ const DashboardPage = () => {
       },
     })
       .then(function (response) {
-        console.log(response);
+        // console.log(response);
         if (response?.data?.tokenStatus == false) {
           setLoading(false);
           navigate('/login');
@@ -263,14 +267,15 @@ const DashboardPage = () => {
                   <h4 className="dashboardRight_heading">Referral Link</h4>
                   <img src={Reffer} alt="imagesreferral" />
                   <div className="referrallink_Copy">
-                    <input
+                    <p id="refLink">{window.location.origin + "/login/?ref=" + dashboardData?.profile?.username}</p>
+                    {/* <input
                       id="refLink"
                       type="text"
                       class="form-control reffer"
                       placeholder="Referral Link"
                       value={window.location.origin + "/login/?ref=" + dashboardData?.profile?.username}
-                    />
-                    <i onClick={() => CopyToClipboard("refLink")}>
+                    /> */}
+                    <i onClick={() => CopyPara("refLink")}>
                       <IoIosCopy />
                     </i>
                   </div>

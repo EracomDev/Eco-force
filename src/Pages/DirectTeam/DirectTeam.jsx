@@ -32,7 +32,7 @@ const DirectTeam = () => {
             },
         })
             .then(function (response) {
-                console.log(response);
+                // console.log(response);
                 if (response?.data?.tokenStatus == false) {
                     setLoading(false);
                     navigate('/login');
@@ -47,9 +47,9 @@ const DirectTeam = () => {
             });
     }
     function FetchFilterData() {
-        console.log('username', userId)
-        console.log('start_date', startDate)
-        console.log('end_date', endDate)
+        // console.log('username', userId)
+        // console.log('start_date', startDate)
+        // console.log('end_date', endDate)
         let myLink = `${ApiPaths.TeamDirect}/?username=${userId}&start_date=${startDate}&end_date=${endDate}`
         setLoading(true);
         axios({
@@ -61,12 +61,12 @@ const DirectTeam = () => {
             },
         })
             .then(function (response) {
-                console.log(response);
+                // console.log(response);
                 if (response?.data?.tokenStatus == false) {
                     setLoading(false);
                     navigate('/login');
                 } else if (response?.data) {
-                    console.log('filter direct team', response)
+                    // console.log('filter direct team', response)
                     setDirectTeam(response?.data?.result);
                 }
                 setLoading(false)

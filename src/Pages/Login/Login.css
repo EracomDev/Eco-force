@@ -251,7 +251,6 @@
     text-transform: uppercase;
     margin: 10px 0px;
     background: var(--btnColor);
-    border: 1px solid transparent;
     /* transition: all 0.4s; */
 }
 

@@ -8,6 +8,10 @@ import { ApiPaths } from "../../API";
 import Loader from "../../Component/Loader/Loader";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Change from "../../Common/StringToSub";
+import { IoCopyOutline } from "react-icons/io5";
+import CopyToClipboard from "../../Common/CopyToClipboard";
+import CopyPara from "../../Common/CopyPara";
 const Profile = () => {
   const navigate = useNavigate();
   const [profileData, setProfileData] = useState([]);
@@ -28,7 +32,7 @@ const Profile = () => {
       },
     })
       .then(function (response) {
-        console.log(response);
+        // console.log(response);
         if (response?.data?.tokenStatus == false) {
           setLoading(false);
           navigate('/login');
@@ -82,7 +86,11 @@ const Profile = () => {
                         </i>
                         Address
                       </div>
-                      <p>{profileData?.userAddress}</p>
+                      <div className="d-flex align-items-center m-0">
+                        <p className="m-0 mx-1 d-none" id="addr">{profileData?.userAddress}</p>
+                        <p className="m-0 mx-1">{Change(profileData?.userAddress)}</p>
+                        <i className="m-0 d-flex" style={{ cursor: "pointer" }} onClick={() => CopyPara("addr")}><IoCopyOutline /></i>
+                      </div>
                     </li>
                     <li>
                       <div>

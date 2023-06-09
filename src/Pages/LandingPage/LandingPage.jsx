@@ -13,6 +13,7 @@ import Footer from "./../../Component/Footer/Footer";
 import ScrollToTop from "./../../Component/ScrollToTop/ScrollToTop";
 import { Container, Row, Col } from "react-bootstrap";
 import Roadmap from "../../Component/Roadmap/Roadmap";
+import Pdf from './../../PDF/pdf.pdf'
 const LandingPage = () => {
   const [cryptoRate, setCryptoRate] = useState([]);
   const [width, setWidth] = useState();
@@ -30,7 +31,7 @@ const LandingPage = () => {
       );
       const data = await response.json();
       setCryptoRate(data);
-      console.log("cryptoRate", data);
+      // console.log("cryptoRate", data);
     } catch (e) {
       console.log(e);
     }
@@ -131,9 +132,9 @@ const LandingPage = () => {
                   technology that enable customers to execute critical
                   investing, trading, and risk decisions with confidence.
                 </p>
-                <button className="btnPrimary" style={{ marginRight: "20px" }}>
-                  Read More{" "}
-                </button>
+                <a href={Pdf} target="_blank">
+                  <button className="btnPrimary" style={{ marginRight: "20px" }}>Read More</button>
+                </a>
                 {/* <button className="btnSecondary btnWatch"><i><FaPlay /></i> Watch video</button> */}
               </div>
             </Col>
@@ -200,7 +201,7 @@ const LandingPage = () => {
       </section> */}
       <section className="roadmap" id="roadmap">
         <h1 className="secHeading white">Road Map</h1>
-        <p className="secSubHeading white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean cursus tincidunt ultrices. Ut quis blandit dolor. Ut laoreet sagittis arcu eu tristique.</p>
+        <p className="secSubHeading white">A roadmap provides a clear and transparent view of the trading website's future plans and upcoming features.</p>
         <Roadmap />
       </section>
       <section className="footer">

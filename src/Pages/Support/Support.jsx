@@ -31,7 +31,7 @@ const Support = () => {
       },
     })
       .then(function (response) {
-        console.log(response);
+        // console.log(response);
         if (response?.data?.tokenStatus == false) {
           setLoading(false);
           navigate('/login');
@@ -59,7 +59,7 @@ const Support = () => {
       },
     })
       .then(function (response) {
-        console.log(response);
+        // console.log(response);
         if (response?.data?.tokenStatus == false) {
           setLoading(false);
           navigate('/login');

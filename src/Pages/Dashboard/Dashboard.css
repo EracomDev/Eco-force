@@ -179,4 +179,12 @@ ul.menuList li h5 i {
     .active i {
         color: var(--textLight) !important;
     }
+
+    .menuList li:hover h5 {
+        color: black !important;
+    }
+
+    .menuList li:hover h5 i {
+        color: black !important;
+    }
 }

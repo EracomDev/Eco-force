@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Dashboard.css";
 import Logo from "../../images/logo.png";
 import Plan from "../../images/plan.png";
-import User from "../../images/user.png";
+import User from "../../images/profile_user.png";
 import { ImHome } from "react-icons/im";
 import { CgProfile, CgGift } from "react-icons/cg";
 import { FaMoneyBillAlt } from "react-icons/fa";
@@ -15,7 +15,7 @@ import { BsPersonFillDown } from "react-icons/bs";
 import { IoIosArrowDown } from "react-icons/io";
 import axios from "axios";
 import { ApiPaths } from "../../API";
-
+import Pdf from "./../../PDF/pdf.pdf"
 const Dashboard = () => {
   const navigate = useNavigate();
   const [toggleIcon, setToggleIcon] = useState(<RiMenu2Line />);
@@ -42,7 +42,7 @@ const Dashboard = () => {
       },
     })
       .then(function (response) {
-        console.log(response);
+        // console.log(response);
         setProfile(response?.data?.profile);
       })
       .catch(function (response) {
@@ -235,10 +235,12 @@ const Dashboard = () => {
                 </h5>
               </li>
             </ul>
-            <div className="planDetail">
-              <img src={Plan} alt="planimage" />
-              <h6>check your plan now</h6>
-            </div>
+            <a href={Pdf} target="_blank">
+              <div className="planDetail">
+                <img src={Plan} alt="planimage" />
+                <h6>check your plan now</h6>
+              </div>
+            </a>
           </div>
         </div>
         <div className="navHeader">
